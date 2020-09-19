@@ -1,3 +1,3 @@
 # rpc_api
 
-A Remote Procedure Call (RPC) based api
+A Remote Procedure Call (RPC) Based API
