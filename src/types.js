@@ -1,5 +1,6 @@
-"use strict";
-var types = {
+'use strict';
+
+let types = {
     user: {
         description: 'the details pf the user',
         props: {
@@ -14,8 +15,9 @@ var types = {
         props: {
             userId: ['number', 'required'],
             content: ['string', 'required'],
-            expire: ['date', 'required']
+            expire: ['date','required']
         }
     }
-};
+}
+
 module.exports = types;

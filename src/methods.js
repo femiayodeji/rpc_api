@@ -1,4 +1,4 @@
-import { resolve } from "path";
+'use strict';
 
 let context = require('./db');
 
@@ -7,9 +7,9 @@ let methods = {
         description: `creates a new user, and return the details of the new user`,
         params: ['user: the user object'],
         returns: ['user'],
-        exec(userObj: any) {
+        exec(userObj){
             return new Promise((resolve) => {
-                if (typeof (userObj) !== 'object') {
+                if(typeof(userObj) !== 'object'){
                     throw new Error('Expected an object!');
                 }
 
@@ -25,9 +25,9 @@ let methods = {
         description: `gets the user of the given id`,
         params: ['id: the id of the user'],
         returns: ['user'],
-        exec(userObj: any) {
+        exec(userObj){
             return new Promise((resolve) => {
-                if (typeof (userObj) !== 'object') {
+                if(typeof(userObj) !== 'object'){
                     throw new Error('Expected an object!');
                 }
                 //todo validations
@@ -40,7 +40,7 @@ let methods = {
         description: `fetched the entire list of users`,
         params: [],
         returns: ['list of all users'],
-        exec() {
+        exec(){
             return new Promise((resolve) => {
                 resolve(context.users.retrieveAll() || {});
             });
