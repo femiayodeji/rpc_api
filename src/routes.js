@@ -1,5 +1,6 @@
 const methods = require('./methods');
 const types = require('./types');
+const { clone } = require('./utils')
 
 let routes = {
     // rpc endpoints
@@ -50,7 +51,7 @@ let routes = {
             type = types;
 
             for(let m in methods){
-                let _m = JSON.parse(JSON.stringify(methods[m]));
+                let _m = clone(methods[m]);
                 method[m] = _m;
             }
 

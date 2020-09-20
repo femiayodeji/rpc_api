@@ -1,5 +1,7 @@
 'use strict';
 
+const { clone } = require('./utils')
+
 let users = {};
 let tasks = {};
 
@@ -8,10 +10,6 @@ const db = {
     users: proc(users),
     tasks: proc(tasks)
 };
-
-function clone(obj){
-    return JSON.parse(JSON.stringify(obj));
-}
 
 function proc(container){
     return {

@@ -1,5 +1,7 @@
 'use strict';
 
+const { clone } = require('./utils')
+
 let context = require('./db');
 
 let methods = {
@@ -15,7 +17,7 @@ let methods = {
 
                 //todo validations
 
-                let _userObj = JSON.parse(JSON.stringify(userObj));
+                let _userObj = clone(userObj);
                 _userObj.id = (Math.random() * 10000000) | 0;
                 resolve(context.users.save(userObj));
             });
@@ -37,7 +39,7 @@ let methods = {
         }
     },
     getAllUsers: {
-        description: `fetched the entire list of users`,
+        description: `gets the entire list of users`,
         params: [],
         returns: ['list of all users'],
         exec(){
