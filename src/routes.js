@@ -2,8 +2,8 @@ const methods = require('./methods');
 const types = require('./types');
 
 let routes = {
-    // RPC endpoints
-    'rpc': function (body){
+    // rpc endpoints
+    '/rpc': function (body){
         return new Promise((resolve, reject) => {
             if(!body){
                 throw new Error(`rpc request was expecting some data...!`);
@@ -19,8 +19,7 @@ let routes = {
                         throw new Error(`exec on ${key} did not return a promise`);
                     }
                     promiseArr.push(execPromise);
-                }
-                else {
+                } else {
                     let execPromise = Promise.resolve({
                         error: 'method not defined'
                     })

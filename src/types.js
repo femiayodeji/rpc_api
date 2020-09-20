@@ -1,5 +1,4 @@
 'use strict';
-
 let types = {
     user: {
         description: 'the details pf the user',

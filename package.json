@@ -1,14 +1,14 @@
 {
   "name": "rpc_api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Remote Procedure Call (RPC) Based API",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Femi Ayodeji <femidotayodeji@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.4"
